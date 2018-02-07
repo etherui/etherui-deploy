@@ -112,6 +112,8 @@ const run = async () => {
     const done = await createSmartContractNewUI(smartContractAddress, SCJSON, token);
     if (done) {
       console.log(chalk.green(`All done! You can check your new UI for Smart contract by URL: ${baseUrl}/smartcontract/${smartContractAddress}`));
+    } else {
+      console.log(chalk.red('Something wrong. Please, try again.'));
     }
   } catch (err) {
     console.log(chalk.red(err.message));
